@@ -5,7 +5,7 @@ from idea_lab import idea_lab
 from world_builder import world_builder
 from self_debugger import self_debugger
 from multi_agent import multi_agent_module, agent_interaction_loop
-from dashboard import dashboard
+from sandbox_engine import dashboard
 import sys
 
 MODULES = {
