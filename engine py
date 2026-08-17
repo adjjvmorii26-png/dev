@@ -1,0 +1,16 @@
+class Sandbox:
+    def __init__(self):
+        self.state = {}
+        self.logs = []
+
+    def log(self, message):
+        self.logs.append(message)
+
+    def update(self, key, value):
+        self.state[key] = value
+        self.log(f"State updated: {key} = {value}")
+
+    def run_module(self, module_fn, *args, **kwargs):
+        result = module_fn(self, *args, **kwargs)
+        self.log(f"Module executed: {module_fn.__name__}")
+        return result
